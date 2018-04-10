@@ -70,13 +70,13 @@ for (var i = 0; i < 4; i++) {
 }
 
 var template = document.querySelector('#similar-wizard-template')
-  .content.querySelector('.setup-similar-item');
+    .content.querySelector('.setup-similar-item');
 
 var similarList = document.querySelector('.setup-similar-list');
 
 var generateWizards = function () {
   var generatedWizards = [];
-  for (var i = 0; i < wizardsData.length; i++) {
+  for (i = 0; i < wizardsData.length; i++) {
     generatedWizards[i] = template.cloneNode(true);
     generatedWizards[i].querySelector('.setup-similar-label').textContent = wizardsData[i].name;
     generatedWizards[i].querySelector('.wizard-coat').style.fill = wizardsData[i].coatColor;
@@ -90,7 +90,7 @@ var generateFragment = function () {
   var generatedWizards = generateWizards();
   var fragment = document.createDocumentFragment();
 
-  for (var i = 0; i < generatedWizards.length; i++) {
+  for (i = 0; i < generatedWizards.length; i++) {
     fragment.appendChild(generatedWizards[i]);
   }
   return fragment;
