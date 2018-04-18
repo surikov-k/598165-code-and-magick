@@ -112,7 +112,8 @@ similarList.appendChild(generateFragment());
 document.querySelector('.setup-similar').classList.remove('hidden');
 
 var onPopupEscPress = function (evt) {
-  if (evt.keyCode === ESC_KEYCODE) {
+  if (evt.keyCode === ESC_KEYCODE
+      && document.activeElement.name !== 'username') {
     closePopup();
   }
 };
